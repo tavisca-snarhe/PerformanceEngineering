@@ -1,4 +1,5 @@
 ﻿using System;
+using BenchmarkDotNet.Running;
 
 namespace PerformanceEngineering
 {
@@ -6,7 +7,9 @@ namespace PerformanceEngineering
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            BenchmarkRunner.Run<PerformanceTest>();
+            Console.ReadKey(true);
         }
     }
+
 }
